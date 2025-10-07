@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- College Name -->
+        <EditText
+            android:id="@+id/editCollege"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="College (e.g., Hindu College)" />
+
+        <!-- Start Year -->
+        <EditText
+            android:id="@+id/editStartYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Start Year"
+            android:inputType="number" />
+
+        <!-- End Year -->
+        <EditText
+            android:id="@+id/editEndYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="End Year"
+            android:inputType="number" />
+
+        <!-- Stream (Optional) -->
+        <EditText
+            android:id="@+id/editStream"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Stream (Optional)" />
+
+        <!-- Performance Score -->
+        <EditText
+            android:id="@+id/editScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Performance Score (%)"
+            android:inputType="numberDecimal" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/black"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>

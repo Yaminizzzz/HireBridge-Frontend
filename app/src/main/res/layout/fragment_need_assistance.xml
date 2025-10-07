@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvHelpTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HELP CENTRE"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Need Further Assistance"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold" />
+
+        <!-- Greeting -->
+        <TextView
+            android:id="@+id/tvGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi, Yamini, submit your query below"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp" />
+
+        <!-- Subject -->
+        <EditText
+            android:id="@+id/etSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your subject of query"
+            android:layout_marginTop="16dp"
+            android:background="@android:drawable/edit_text"
+            android:padding="10dp" />
+
+        <!-- Query -->
+        <EditText
+            android:id="@+id/etQuery"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="top"
+            android:hint="Please type your query"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="12dp"
+            android:background="@android:drawable/edit_text"
+            android:padding="10dp" />
+
+        <!-- Add Attachment -->
+        <TextView
+            android:id="@+id/tvAttachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📎 Add attachment"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Max file size 5MB\nOnly jpeg, jpg, png, gif, bmp, pdf allowed"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:textColor="#FFFFFF" />
+
+        <!-- Info Text -->
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We will get back to you within 48 hours.\nThank you for your patience."
+            android:textSize="12sp"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- College -->
+        <EditText
+            android:id="@+id/etCollege"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. Hindu College"
+            android:inputType="text" />
+
+        <!-- Start & End Year -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btnStartYear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Start Year" />
+
+            <Button
+                android:id="@+id/btnEndYear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="End Year" />
+        </LinearLayout>
+
+        <!-- Degree -->
+        <EditText
+            android:id="@+id/etDegree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. B.Sc.(Hons.)"
+            android:layout_marginTop="10dp" />
+
+        <!-- Info Text -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Example: If your degree is B.Sc in Chemistry, then select Bachelor of Science (B.Sc) in degree and Chemistry in streams.\n\nIf you can't find your degree or choose from closest available, write to support@hirebridge.com if you are pursuing a degree not available in the list."
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:background="#EEEEEE"
+            android:layout_marginTop="5dp" />
+
+        <!-- Stream (Optional) -->
+        <EditText
+            android:id="@+id/etStream"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. Economics"
+            android:layout_marginTop="10dp" />
+
+        <!-- Performance Score -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp">
+
+            <Spinner
+                android:id="@+id/spinnerPerformanceType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/performance_type" />
+
+            <EditText
+                android:id="@+id/etPerformanceScore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Out of 100"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSaveGraduation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HELP CENTRE"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Facing An Issue"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+
+        <!-- Q1 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#E0E0E0"
+            android:padding="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Q1. I have been hired but employer is not replying to my emails or calls. What should I do?"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Please try to follow-up with the employer. If you are still not able to establish a contact, please drop a query here and we will look into the issue and will try to contact the employer from our end."
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Q2 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#E0E0E0"
+            android:padding="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Q2. The salary mentioned on HireBridge and the salary mentioned in offer do not match. What should I do?"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Please do not pay anything to the employer as it is against the policy of HireBridge to charge students. Draft a query regarding the issue and attach the offer letter along with email/text conversation with the employer. We will look into the issue and take necessary actions."
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Q3 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#E0E0E0"
+            android:padding="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Q3. What does 'Seen' mean?"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="It means that your application has been seen by the employer and they will get in touch with you if they like your application."
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Q4 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#E0E0E0"
+            android:padding="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Q4. What does 'Under review' mean?"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Congratulations! You have moved a step closer to being selected. The employer has considered your application for the further rounds of the selection process."
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Q5 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#E0E0E0"
+            android:padding="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Q5. What does 'Inactive' mean?"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="It means that the internship or job was removed from our website as it was found to be violating our policies. We apologise for the inconvenience caused."
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Q6 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#E0E0E0"
+            android:padding="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Q6. What does 'Hired' mean?"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="It means that you have been hired and the employer will get in touch with more details or turn your profile into their system. Congratulations!"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="10dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvHelpTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HELP CENTRE"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:paddingBottom="8dp" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find Jobs"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingBottom="12dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Q1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#E0E0E0"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvQ1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Q1. How to search for a job in my Category?"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvA1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Click here if you are looking for jobs. Please remember to update your preferences (category, location, duration, etc.) and use relevant filters."
+                    android:textSize="13sp"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+
+            <!-- Q2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#E0E0E0"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvQ2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Q2. I have Forgotten my password, how can I change it?"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvA2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="If you’re not able to find jobs as per your preferences by searching for it in the search bar, it is possible that we don’t have jobs in that particular category/location. However, hundreds of jobs are posted on our platform across various categories/locations every day."
+                    android:textSize="13sp"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+
+            <!-- Q3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#E0E0E0"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvQ3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Q3. How can I apply Jobs?"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvA3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. Check the spam or junk mail folder\n2. Search for an email with the title “Reset Your Account Password”\n3. Wait five minutes for the password reset email to arrive"
+                    android:textSize="13sp"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+
+            <!-- Q4 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#E0E0E0"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvQ4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Q4. Can I apply for job even if I am pursuing my degree?"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvA4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Yes, of course! You can apply to the jobs on HireBridge if you are available to work."
+                    android:textSize="13sp"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

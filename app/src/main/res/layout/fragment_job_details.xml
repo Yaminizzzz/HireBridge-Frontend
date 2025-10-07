@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/tvJobDetailsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JOB DETAILS"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Status Tag -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actively Hiring"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_green_rounded"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:layout_marginTop="12dp" />
+
+        <!-- Job Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UI/UX Design"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Company Name -->
+        <TextView
+            android:id="@+id/tvCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Growedin Group"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Location -->
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yeshwanthpur, Bangalore"
+            android:layout_marginTop="2dp" />
+
+        <!-- Date Posted -->
+        <TextView
+            android:id="@+id/tvDatePosted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8th August 2025"
+            android:layout_marginTop="2dp" />
+
+        <!-- Experience -->
+        <TextView
+            android:id="@+id/tvExperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 year(s) experience"
+            android:layout_marginTop="8dp" />
+
+        <!-- Salary -->
+        <TextView
+            android:id="@+id/tvSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹40,000/month"
+            android:layout_marginTop="2dp" />
+
+        <!-- Applied and Vacancies -->
+        <TextView
+            android:id="@+id/tvApplied"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="700 applied"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/tvVacancies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15 vacancies"
+            android:layout_marginTop="2dp" />
+
+        <!-- Early Applicant -->
+        <TextView
+            android:id="@+id/tvEarlyApplicant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Be an early applicant"
+            android:layout_marginTop="2dp" />
+
+        <!-- Apply Now Button -->
+        <Button
+            android:id="@+id/btnApply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apply now"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF" />
+
+        <!-- About Job -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Job"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp" />
+
+        <!-- Key Responsibilities -->
+        <TextView
+            android:id="@+id/tvResponsibilities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Key Responsibilities:\n\n1. Define the creative vision...\n2. Mentor and guide junior designers...\n3. Ensure that designs meet...\n..."
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>

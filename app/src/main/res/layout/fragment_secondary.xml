@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Matriculation Status -->
+        <RadioGroup
+            android:id="@+id/radioGroupStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioPursuing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pursuing" />
+
+            <RadioButton
+                android:id="@+id/radioCompleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completed" />
+        </RadioGroup>
+
+        <!-- Year of Completion -->
+        <EditText
+            android:id="@+id/editYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Year of completion"
+            android:inputType="number" />
+
+        <!-- Board -->
+        <EditText
+            android:id="@+id/editBoard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Board (e.g., CBSE)" />
+
+        <!-- Performance Score -->
+        <EditText
+            android:id="@+id/editScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Performance Score (%)"
+            android:inputType="numberDecimal" />
+
+        <!-- School -->
+        <EditText
+            android:id="@+id/editSchool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="School (e.g., Delhi Public School)" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:backgroundTint="@color/black"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
+</ScrollView>

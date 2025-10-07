@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Career Objective"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="8dp" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add a brief career objective to help employers understand your career aspirations and value you can deliver to their organization."
+        android:textSize="14sp"
+        android:paddingBottom="12dp" />
+
+    <!-- EditText for Career Objective -->
+    <EditText
+        android:id="@+id/etCareerObjective"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="top|start"
+        android:hint="Enter your career objective"
+        android:background="@android:color/darker_gray"
+        android:padding="8dp"
+        android:maxLength="300"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:overScrollMode="always" />
+
+    <!-- Character Count -->
+    <TextView
+        android:id="@+id/tvCharCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/300"
+        android:textSize="12sp"
+        android:layout_gravity="end"
+        android:paddingTop="4dp"
+        android:paddingBottom="16dp" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/btnSaveObjective"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:background="@android:color/holo_green_dark"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

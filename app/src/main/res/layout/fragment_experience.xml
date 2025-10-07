@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Designation -->
+        <EditText
+            android:id="@+id/etDesignation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. Software Engineer"
+            android:inputType="text" />
+
+        <!-- Profile -->
+        <EditText
+            android:id="@+id/etProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. Operations"
+            android:inputType="text"
+            android:layout_marginTop="10dp" />
+
+        <!-- Location -->
+        <EditText
+            android:id="@+id/etLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. Mumbai"
+            android:inputType="text"
+            android:layout_marginTop="10dp" />
+
+        <!-- Is work from home -->
+        <CheckBox
+            android:id="@+id/cbWorkFromHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Is work from home"
+            android:layout_marginTop="10dp" />
+
+        <!-- Start Date and End Date -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Start Date" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="End Date" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/btnStartDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Select Start Date" />
+
+            <Button
+                android:id="@+id/btnEndDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Select End Date" />
+        </LinearLayout>
+
+        <!-- Currently working here -->
+        <CheckBox
+            android:id="@+id/cbCurrentWork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Currently working here"
+            android:layout_marginTop="10dp" />
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description (Optional)"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <!-- Protip -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Protip :\n1. Mention key job responsible, measurable impact or results.\n2. Use action verbs.\n3. Use numbers and percentages wherever possible."
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:background="#EEEEEE"
+            android:layout_marginTop="5dp" />
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:hint="Write your description here..."
+            android:layout_marginTop="10dp" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSaveResume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>

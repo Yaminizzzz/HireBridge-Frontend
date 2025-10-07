@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Username -->
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_person"
+            android:hint="Username"
+            android:background="@drawable/bg_white_rounded"
+            android:padding="10dp" />
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_email"
+            android:hint="Email ID"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/bg_white_rounded"
+            android:layout_marginTop="10dp"
+            android:padding="10dp" />
+
+        <!-- Phone -->
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_phone"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:background="@drawable/bg_white_rounded"
+            android:layout_marginTop="10dp"
+            android:padding="10dp" />
+
+        <!-- Location -->
+        <EditText
+            android:id="@+id/etLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_location"
+            android:hint="Location"
+            android:background="@drawable/bg_white_rounded"
+            android:layout_marginTop="10dp"
+            android:padding="10dp" />
+
+        <!-- Gender -->
+        <Spinner
+            android:id="@+id/spinnerGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_rounded"
+            android:layout_marginTop="10dp"
+            android:padding="10dp" />
+
+        <!-- Languages Known -->
+        <EditText
+            android:id="@+id/etLanguages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_language"
+            android:hint="Languages Known"
+            android:background="@drawable/bg_white_rounded"
+            android:layout_marginTop="10dp"
+            android:padding="10dp" />
+
+        <!-- College Name -->
+        <EditText
+            android:id="@+id/etCollege"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_college"
+            android:hint="College Name"
+            android:background="@drawable/bg_white_rounded"
+            android:layout_marginTop="10dp"
+            android:padding="10dp" />
+
+        <!-- CGPA -->
+        <EditText
+            android:id="@+id/etCgpa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_cgpa"
+            android:hint="CGPA"
+            android:inputType="numberDecimal"
+            android:background="@drawable/bg_white_rounded"
+            android:layout_marginTop="10dp"
+            android:padding="10dp" />
+
+        <!-- Domain -->
+        <EditText
+            android:id="@+id/etDomain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_domain"
+            android:hint="Domain"
+            android:background="@drawable/bg_white_rounded"
+            android:layout_marginTop="10dp"
+            android:padding="10dp" />
+
+        <!-- Resume Upload -->
+        <Button
+            android:id="@+id/btnUploadResume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload File"
+            android:background="@drawable/bg_green_rounded"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp" />
+
+        <!-- Next -->
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            android:background="@drawable/bg_green_rounded"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>

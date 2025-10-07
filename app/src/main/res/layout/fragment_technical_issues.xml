@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HELP CENTRE"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Technical Issues"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:padding="8dp" />
+
+        <!-- Q1 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#E0E0E0"
+            android:padding="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Q1. I have registered on HireBridge but unable to verify my account"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Please check your spam folder too for the verification link. If you are still unable to find it or are not able to verify the account, drop a query here regarding the same and we will verify your account."
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Q2 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#E0E0E0"
+            android:padding="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Q2. I am facing difficulties in using the HireBridge?"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Please make sure that you are using the latest version of the App. To check if you are using the latest version or not, please visit the Google Play Store and check if there is an update available for the App or not. If you are using the latest version and still facing difficulties then kindly try to uninstall and then reinstall the App. If the problem still persists then, please send us a screenshot of the problem from here so that we can look into it and assist you."
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

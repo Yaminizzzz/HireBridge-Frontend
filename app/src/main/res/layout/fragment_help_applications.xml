@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="12dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvHelpTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HELP CENTRE"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:paddingBottom="6dp" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Applications"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingBottom="12dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Q1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#E0E0E0"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvQ1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Q1. What does the status 'Rejected' mean"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvA1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="It means that unfortunately, your application was rejected and you have not been selected for the internship/job. We suggest you improve your applications and keep applying for various other opportunities to increase your chances of getting hired."
+                    android:textSize="13sp"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+
+            <!-- Q2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#E0E0E0"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvQ2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Q2. What does the status 'Applied' mean?"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvA2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="It means that you have successfully applied and your application has been shared with the employer."
+                    android:textSize="13sp"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+
+            <!-- Q3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#E0E0E0"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvQ3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Q3. What does 'Seen' mean?"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvA3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="It means that your application has been seen by the employer and they will get in touch with you if they like your application."
+                    android:textSize="13sp"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+
+            <!-- Q4 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#E0E0E0"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvQ4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Q4. What does 'Under review' mean?"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvA4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Congratulations! You have moved a step closer to being selected. The employer has considered your application for the further rounds of the selection process."
+                    android:textSize="13sp"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+
+            <!-- Q5 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#E0E0E0"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvQ5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Q5. What does 'Inactive' mean?"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvA5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="It means that the internship or job was removed from our website as it was found to be violating our policies. We apologise for the inconvenience caused."
+                    android:textSize="13sp"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+
+            <!-- Q6 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#E0E0E0"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvQ6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Q6. What does 'Hired' mean?"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvA6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="It means that you have been hired and the employer will get in touch with more details or next steps to join the team."
+                    android:textSize="13sp"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN-IN"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Username -->
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Username"
+            android:drawableLeft="@android:drawable/ic_menu_edit"
+            android:padding="10dp"
+            android:background="@drawable/edittext_bg"
+            android:inputType="textPersonName"/>
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Email ID"
+            android:drawableLeft="@android:drawable/ic_dialog_email"
+            android:padding="10dp"
+            android:background="@drawable/edittext_bg"
+            android:layout_marginTop="10dp"
+            android:inputType="textEmailAddress"/>
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Password"
+            android:drawableLeft="@android:drawable/ic_lock_lock"
+            android:padding="10dp"
+            android:background="@drawable/edittext_bg"
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"/>
+
+        <!-- Confirm Password -->
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Confirm Password"
+            android:drawableLeft="@android:drawable/ic_lock_lock"
+            android:padding="10dp"
+            android:background="@drawable/edittext_bg"
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"/>
+
+        <!-- Sign In button -->
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="SIGN IN"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/green"
+            android:layout_marginTop="20dp"/>
+
+        <!-- Google -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/google_btn_bg"
+            android:text="Sign in with Google"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:icon="@drawable/ic_google"
+            app:iconGravity="start"
+            app:iconPadding="8dp"
+            app:iconTint="@null"
+            app:backgroundTint="@null"
+            app:rippleColor="@android:color/darker_gray"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_marginTop="15dp"/>
+
+
+
+        <!-- Already have account -->
+        <TextView
+            android:id="@+id/tvLoginRedirect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already having an Account? Login"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/holo_blue_dark"/>
+
+        <!-- Terms -->
+        <CheckBox
+            android:id="@+id/cbTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agree to HireBridge's Terms And Conditions."/>
+    </LinearLayout>
+</ScrollView>

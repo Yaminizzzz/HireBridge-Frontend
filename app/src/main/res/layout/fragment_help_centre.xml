@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title Section -->
+        <TextView
+            android:id="@+id/helpTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HELP CENTRE"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/helpSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact   Student Help Centre"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Greeting -->
+        <TextView
+            android:id="@+id/helpGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi, Yamini!\nWhat can we help you with?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <!-- Grid of Help Options -->
+        <GridLayout
+            android:id="@+id/helpOptionsGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:layout_marginTop="16dp"
+            android:alignmentMode="alignMargins"
+            android:rowOrderPreserved="false"
+            android:useDefaultMargins="true">
+
+            <!-- Item 1 -->
+            <LinearLayout
+                style="@style/HelpOptionItem"
+                android:id="@+id/optionAccount">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_account" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Account/Profile"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <!-- Item 2 -->
+            <LinearLayout
+                style="@style/HelpOptionItem"
+                android:id="@+id/optionFindJobs">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_job" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Find Jobs"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <!-- Item 3 -->
+            <LinearLayout
+                style="@style/HelpOptionItem"
+                android:id="@+id/optionApplications">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_application" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Applications"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <!-- Item 4 -->
+            <LinearLayout
+                style="@style/HelpOptionItem"
+                android:id="@+id/optionFacingIssue">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_issue" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Facing an Issue"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <!-- Item 5 -->
+            <LinearLayout
+                style="@style/HelpOptionItem"
+                android:id="@+id/optionTechnical">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_technical" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Technical Issues"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <!-- Item 6 -->
+            <LinearLayout
+                style="@style/HelpOptionItem"
+                android:id="@+id/optionAssistance">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_assistance" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Need Assistance" />
+            </LinearLayout>
+
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

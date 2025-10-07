@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iconShield"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_shield"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/safetyTipsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SAFETY TIPS"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="At HireBridge, we are committed to making your online experience a safe and reliable one. The following information is designed to help job seekers identify common red flags and avoid fraud." />
+
+        <!-- Asking for Money -->
+        <TextView
+            android:id="@+id/askingForMoneyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🛑 Asking for Money"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/askingForMoneyDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="If an employer asks you for money (training fee, registration fee, security deposit, exam fee, document charges, etc.), do not make any payment and report immediately. Genuine companies will never charge applicants." />
+
+        <!-- Discrepancy in Job Description -->
+        <TextView
+            android:id="@+id/discrepancyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚠️ Discrepancy in Job Description"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/discrepancyDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Be cautious if the offered job is different from the one posted. Red flags include:\n• Promotion of explicit, religious, or political content.\n• Gambling or betting-related jobs.\n• Network marketing schemes.\n• Adult content creation.\n• Jobs requiring paid courses.\n• Mismatched role description." />
+
+        <!-- Refusal to Pay Salary -->
+        <TextView
+            android:id="@+id/refusalTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="❌ Refusal to Pay Salary / Issue Certificates"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/refusalDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All job ads must clearly mention salary/paid positions." />
+    </LinearLayout>
+</ScrollView>

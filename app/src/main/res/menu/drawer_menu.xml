@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_jobs" android:title="Jobs"/>
+        <item android:id="@+id/nav_notifications" android:title="Notifications"/>
+        <item android:id="@+id/nav_help" android:title="Help Centre"/>
+        <item android:id="@+id/nav_complaint" android:title="My Applications"/>
+        <item android:id="@+id/nav_safety" android:title="Safety Tips"/>
+        <item android:id="@+id/nav_terms" android:title="Terms &amp; Conditions"/>
+        <item android:id="@+id/nav_privacy" android:title="Privacy Policy"/>
+        <item android:id="@+id/nav_about" android:title="About"/>
+        <item android:id="@+id/nav_update_password" android:title="Update Password"/>
+        <item android:id="@+id/nav_manage_accounts" android:title="Manage Accounts"/>
+        <item android:id="@+id/nav_logout" android:title="Logout"/>
+    </group>
+</menu>
