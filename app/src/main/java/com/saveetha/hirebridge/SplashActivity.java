@@ -16,27 +16,27 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                SharedPreferences sharedPreferences = getSharedPreferences("HireBridgePrefs", MODE_PRIVATE);
-                boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
+        new Handler().postDelayed(() -> {
+            SharedPreferences sharedPreferences = getSharedPreferences("HireBridgePrefs", MODE_PRIVATE);
+            boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
+            boolean isSubscribed = getSharedPreferences("subscription_prefs", MODE_PRIVATE)
+                    .getBoolean("is_premium_user", false);
 
-                if (isLoggedIn) {
-                    boolean isDetailsFilled = sharedPreferences.getBoolean("isDetailsFilled", false);
-                    if (isDetailsFilled) {
-                        // User logged in & details filled → Dashboard
-                        startActivity(new Intent(SplashActivity.this, DashboardActivity.class));
-                    } else {
-                        // User logged in but details not filled → PersonalDetailsActivity
-                        startActivity(new Intent(SplashActivity.this, PersonalDetailsActivity.class));
-                    }
+            if (!isSubscribed) {
+                // Not subscribed → go to subscription screen first
+                startActivity(new Intent(SplashActivity.this, Subscription.class));
+            } else if (isLoggedIn) {
+                boolean isDetailsFilled = sharedPreferences.getBoolean("isDetailsFilled", false);
+                if (isDetailsFilled) {
+                    startActivity(new Intent(SplashActivity.this, DashboardActivity.class));
                 } else {
-                    // Not logged in → Login screen
-                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                    startActivity(new Intent(SplashActivity.this, PersonalDetailsActivity.class));
                 }
-                finish();
+            } else {
+                startActivity(new Intent(SplashActivity.this, MainActivity.class));
             }
+
+            finish();
         }, SPLASH_SCREEN_TIME);
     }
 }

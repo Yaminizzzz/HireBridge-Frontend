@@ -16,6 +16,9 @@
         android:theme="@style/Theme.HireBridge"
         tools:targetApi="31">
         <activity
+            android:name=".splashscreen"
+            android:exported="false" />
+        <activity
             android:name=".Subscription"
             android:exported="false" />
         <activity

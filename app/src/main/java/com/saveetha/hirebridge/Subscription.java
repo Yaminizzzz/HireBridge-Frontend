@@ -24,7 +24,7 @@ public class Subscription extends AppCompatActivity implements PurchasesUpdatedL
     private ProductDetails productDetails;
 
     private static final String TAG = "SubscriptionActivity";
-    private static final String SUBSCRIPTION_SKU = "univault_premium_subscription";
+    private static final String SUBSCRIPTION_SKU = "hirebridge_premium_subscription";
     private static final String TEST_SUBSCRIPTION_SKU = "android.test.purchased"; // For testing
 
     @Override
@@ -118,20 +118,6 @@ public class Subscription extends AppCompatActivity implements PurchasesUpdatedL
                 if (!productDetailsList.isEmpty()) {
                     productDetails = productDetailsList.get(0);
                     Log.d(TAG, "Product details retrieved successfully for: " + productId);
-
-                    if (BillingClient.ProductType.SUBS.equals(productType)) {
-                        List<ProductDetails.SubscriptionOfferDetails> offers = productDetails.getSubscriptionOfferDetails();
-                        if (offers != null && !offers.isEmpty()) {
-                            Log.d(TAG, "Available subscription offers: " + offers.size());
-                            for (int i = 0; i < offers.size(); i++) {
-                                ProductDetails.SubscriptionOfferDetails offer = offers.get(i);
-                                Log.d(TAG, "Offer " + i + ": basePlanId=" + offer.getBasePlanId() +
-                                        ", offerToken=" + offer.getOfferToken());
-                            }
-                        } else {
-                            Log.w(TAG, "No subscription offers found");
-                        }
-                    }
                     callback.onResult(true);
                 } else {
                     Log.e(TAG, "No product details found for: " + productId);
@@ -151,12 +137,21 @@ public class Subscription extends AppCompatActivity implements PurchasesUpdatedL
     }
 
     private void setupClickListeners() {
+        // Skip button goes to MainActivity
         btnSkipForNow.setOnClickListener(v -> {
             startActivity(new Intent(Subscription.this, MainActivity.class));
             finish();
         });
 
-        btnSubscribe.setOnClickListener(v -> launchSubscriptionFlow());
+        // ✅ Updated: Start Premium button also navigates to MainActivity directly
+        btnSubscribe.setOnClickListener(v -> {
+            // Direct navigation for now (you can later re-enable billing if needed)
+            Toast.makeText(this, "Welcome to Premium!", Toast.LENGTH_SHORT).show();
+            navigateToMain();
+
+            // Uncomment the next line to use the actual subscription purchase flow instead
+            // launchSubscriptionFlow();
+        });
     }
 
     private void launchSubscriptionFlow() {
@@ -167,29 +162,10 @@ public class Subscription extends AppCompatActivity implements PurchasesUpdatedL
 
         if (productDetails != null) {
             List<BillingFlowParams.ProductDetailsParams> productDetailsParamsList = new ArrayList<>();
-
-            if (BillingClient.ProductType.SUBS.equals(productDetails.getProductType())) {
-                List<ProductDetails.SubscriptionOfferDetails> offers = productDetails.getSubscriptionOfferDetails();
-                if (offers == null || offers.isEmpty()) {
-                    Toast.makeText(this, "No subscription offers available", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                ProductDetails.SubscriptionOfferDetails selectedOffer = offers.get(0);
-                Log.d(TAG, "Using subscription offer: basePlanId=" + selectedOffer.getBasePlanId() +
-                        ", offerToken=" + selectedOffer.getOfferToken());
-
-                productDetailsParamsList.add(
-                        BillingFlowParams.ProductDetailsParams.newBuilder()
-                                .setProductDetails(productDetails)
-                                .setOfferToken(selectedOffer.getOfferToken())
-                                .build());
-            } else {
-                productDetailsParamsList.add(
-                        BillingFlowParams.ProductDetailsParams.newBuilder()
-                                .setProductDetails(productDetails)
-                                .build());
-            }
+            productDetailsParamsList.add(
+                    BillingFlowParams.ProductDetailsParams.newBuilder()
+                            .setProductDetails(productDetails)
+                            .build());
 
             BillingFlowParams billingFlowParams = BillingFlowParams.newBuilder()
                     .setProductDetailsParamsList(productDetailsParamsList)
@@ -200,7 +176,7 @@ public class Subscription extends AppCompatActivity implements PurchasesUpdatedL
             if (result.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                 Log.d(TAG, "Billing flow launched successfully");
             } else {
-                Toast.makeText(this, "Failed to start subscription process: " + result.getDebugMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Failed to start subscription: " + result.getDebugMessage(), Toast.LENGTH_LONG).show();
             }
         } else {
             Toast.makeText(this, "Subscription not available. Please try again.", Toast.LENGTH_SHORT).show();
@@ -209,50 +185,8 @@ public class Subscription extends AppCompatActivity implements PurchasesUpdatedL
 
     @Override
     public void onPurchasesUpdated(@NonNull BillingResult billingResult, List<Purchase> purchases) {
-        Log.d(TAG, "onPurchasesUpdated called - Response Code: " + billingResult.getResponseCode());
-        Log.d(TAG, "Debug Message: " + billingResult.getDebugMessage());
-
-        switch (billingResult.getResponseCode()) {
-            case BillingClient.BillingResponseCode.OK:
-                if (purchases != null) {
-                    for (Purchase purchase : purchases) handlePurchase(purchase);
-                }
-                break;
-            case BillingClient.BillingResponseCode.USER_CANCELED:
-                Toast.makeText(this, "Purchase canceled", Toast.LENGTH_SHORT).show();
-                break;
-            case BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED:
-                Toast.makeText(this, "You already have an active subscription", Toast.LENGTH_SHORT).show();
-                navigateToMain();
-                break;
-            case BillingClient.BillingResponseCode.ITEM_UNAVAILABLE:
-                Toast.makeText(this, "Subscription unavailable. Please download app from Play Store for testing.", Toast.LENGTH_LONG).show();
-                break;
-            case BillingClient.BillingResponseCode.DEVELOPER_ERROR:
-                Toast.makeText(this, "Configuration error. Check Play Console setup.", Toast.LENGTH_LONG).show();
-                break;
-            case BillingClient.BillingResponseCode.SERVICE_UNAVAILABLE:
-                Toast.makeText(this, "Google Play services unavailable. Try again later.", Toast.LENGTH_SHORT).show();
-                break;
-            default:
-                Toast.makeText(this, "Purchase failed: " + getResponseCodeMessage(billingResult.getResponseCode()), Toast.LENGTH_LONG).show();
-        }
-    }
-
-    private String getResponseCodeMessage(int responseCode) {
-        switch (responseCode) {
-            case BillingClient.BillingResponseCode.SERVICE_TIMEOUT:
-                return "Service timeout";
-            case BillingClient.BillingResponseCode.FEATURE_NOT_SUPPORTED:
-                return "Feature not supported";
-            case BillingClient.BillingResponseCode.SERVICE_DISCONNECTED:
-                return "Service disconnected";
-            case BillingClient.BillingResponseCode.BILLING_UNAVAILABLE:
-                return "Billing unavailable";
-            case BillingClient.BillingResponseCode.NETWORK_ERROR:
-                return "Network error";
-            default:
-                return "Unknown error (Code: " + responseCode + ")";
+        if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK && purchases != null) {
+            for (Purchase purchase : purchases) handlePurchase(purchase);
         }
     }
 
@@ -265,10 +199,7 @@ public class Subscription extends AppCompatActivity implements PurchasesUpdatedL
 
                 billingClient.acknowledgePurchase(params, result -> {
                     if (result.getResponseCode() == BillingClient.BillingResponseCode.OK) {
-                        Log.d(TAG, "Purchase acknowledged successfully");
                         onSubscriptionSuccess();
-                    } else {
-                        Log.e(TAG, "Failed to acknowledge purchase: " + result.getDebugMessage());
                     }
                 });
             } else {
@@ -279,13 +210,10 @@ public class Subscription extends AppCompatActivity implements PurchasesUpdatedL
 
     private void onSubscriptionSuccess() {
         Toast.makeText(this, "Subscription successful! Welcome to Premium!", Toast.LENGTH_LONG).show();
-
         getSharedPreferences("subscription_prefs", MODE_PRIVATE)
                 .edit()
                 .putBoolean("is_premium_user", true)
-                .putLong("subscription_time", System.currentTimeMillis())
                 .apply();
-
         navigateToMain();
     }
 
