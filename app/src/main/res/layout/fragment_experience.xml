@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:scrollbars="none"> <!-- 👈 hides the scrollbar -->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="e.g. Software Engineer"
-            android:inputType="text" />
+            android:inputType="text"
+            android:layout_marginBottom="10dp" />
 
         <!-- Profile -->
         <EditText
@@ -25,7 +27,7 @@
             android:layout_height="wrap_content"
             android:hint="e.g. Operations"
             android:inputType="text"
-            android:layout_marginTop="10dp" />
+            android:layout_marginBottom="10dp" />
 
         <!-- Location -->
         <EditText
@@ -34,7 +36,7 @@
             android:layout_height="wrap_content"
             android:hint="e.g. Mumbai"
             android:inputType="text"
-            android:layout_marginTop="10dp" />
+            android:layout_marginBottom="10dp" />
 
         <!-- Is work from home -->
         <CheckBox
@@ -42,49 +44,58 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Is work from home"
-            android:layout_marginTop="10dp" />
+            android:layout_marginBottom="10dp" />
 
-        <!-- Start Date and End Date -->
+        <!-- Start Date and End Date Labels -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="2"
-            android:layout_marginTop="10dp">
+            android:layout_marginBottom="5dp">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Start Date" />
+                android:text="Start Date"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="End Date" />
+                android:text="End Date"
+                android:textStyle="bold" />
         </LinearLayout>
 
+        <!-- Start Date and End Date Buttons -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="2"
-            android:layout_marginTop="5dp">
+            android:layout_marginBottom="10dp">
 
             <Button
                 android:id="@+id/btnStartDate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Select Start Date" />
+                android:text="Select Start Date"
+                android:backgroundTint="#6A1B9A"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="5dp" />
 
             <Button
                 android:id="@+id/btnEndDate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Select End Date" />
+                android:text="Select End Date"
+                android:backgroundTint="#6A1B9A"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="5dp" />
         </LinearLayout>
 
         <!-- Currently working here -->
@@ -93,26 +104,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Currently working here"
-            android:layout_marginTop="10dp" />
+            android:layout_marginBottom="10dp" />
 
-        <!-- Description -->
+        <!-- Description Label -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Description (Optional)"
             android:textStyle="bold"
-            android:layout_marginTop="10dp" />
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp" />
 
         <!-- Protip -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Protip :\n1. Mention key job responsible, measurable impact or results.\n2. Use action verbs.\n3. Use numbers and percentages wherever possible."
+            android:text="Protip:\n1. Mention key job responsibilities and measurable impact.\n2. Use action verbs.\n3. Include numbers or percentages wherever possible."
             android:textSize="14sp"
             android:padding="8dp"
             android:background="#EEEEEE"
-            android:layout_marginTop="5dp" />
+            android:textColor="#444444"
+            android:layout_marginBottom="10dp" />
 
+        <!-- Description Field -->
         <EditText
             android:id="@+id/etDescription"
             android:layout_width="match_parent"
@@ -120,7 +134,7 @@
             android:gravity="top"
             android:inputType="textMultiLine"
             android:hint="Write your description here..."
-            android:layout_marginTop="10dp" />
+            android:layout_marginBottom="20dp" />
 
         <!-- Save Button -->
         <Button
@@ -128,9 +142,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Save"
-            android:backgroundTint="@android:color/holo_green_dark"
-            android:textColor="#FFFFFF"
-            android:layout_marginTop="20dp" />
+            android:backgroundTint="#6A1B9A"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="20dp" />
 
     </LinearLayout>
 </ScrollView>

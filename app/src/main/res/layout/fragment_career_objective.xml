@@ -32,9 +32,10 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="top|start"
+        android:textColor="@color/black"
         android:hint="Enter your career objective"
-        android:background="@android:color/darker_gray"
-        android:padding="8dp"
+        android:background="@drawable/edittext_box"
+        android:padding="12dp"
         android:maxLength="300"
         android:inputType="textMultiLine"
         android:scrollbars="vertical"
@@ -58,7 +59,7 @@
         android:layout_height="wrap_content"
         android:text="Save"
         android:textAllCaps="false"
-        android:background="@android:color/holo_green_dark"
+        android:backgroundTint="#6A1B9A"
         android:textColor="@android:color/white" />
 
 </LinearLayout>

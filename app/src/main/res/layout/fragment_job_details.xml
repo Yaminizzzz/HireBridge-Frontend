@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="JOB DETAILS"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <!-- Status Tag -->
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:text="UI/UX Design"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:layout_marginTop="8dp" />
 
         <!-- Company Name -->

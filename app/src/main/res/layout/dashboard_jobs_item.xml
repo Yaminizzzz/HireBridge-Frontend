@@ -22,8 +22,8 @@
             android:text="Actively Hiring"
             android:textColor="@android:color/white"
             android:background="@drawable/bg_green_rounded"
-            android:padding="4dp"
-            android:textSize="12sp"/>
+            android:padding="6dp"
+            android:textSize="10sp"/>
 
         <!-- Job Title -->
         <TextView

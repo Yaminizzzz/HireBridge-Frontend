@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/green">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:orientation="vertical"
@@ -14,75 +13,105 @@
         <!-- Profile Image -->
         <ImageView
             android:id="@+id/imgProfile"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:src="@drawable/ic_person"
             android:background="@drawable/bg_white_rounded"
             android:scaleType="centerCrop"
             android:layout_marginBottom="16dp"/>
 
         <!-- First Name -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First Name"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
         <EditText
             android:id="@+id/etFirstName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_white_rounded"
-            android:hint="First Name"
             android:padding="10dp"
             android:enabled="false"/>
 
         <!-- Last Name -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last Name"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
         <EditText
             android:id="@+id/etLastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_white_rounded"
-            android:hint="Last Name"
             android:padding="10dp"
-            android:enabled="false"
-            android:layout_marginTop="10dp"/>
+            android:enabled="false"/>
 
         <!-- Email -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_white_rounded"
-            android:hint="Email"
             android:padding="10dp"
-            android:enabled="false"
-            android:layout_marginTop="10dp"/>
+            android:enabled="false"/>
 
         <!-- Phone -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
         <EditText
             android:id="@+id/etPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_white_rounded"
-            android:hint="Phone Number"
             android:padding="10dp"
-            android:enabled="false"
-            android:layout_marginTop="10dp"/>
+            android:enabled="false"/>
 
         <!-- Languages -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Languages Known"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
         <EditText
             android:id="@+id/etLanguages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_white_rounded"
-            android:hint="Languages Known"
             android:padding="10dp"
-            android:enabled="false"
-            android:layout_marginTop="10dp"/>
+            android:enabled="false"/>
 
         <!-- Edit Profile Button -->
         <Button
             android:id="@+id/btnEditProfile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
             android:text="EDIT PROFILE"
-            android:background="@drawable/bg_green_rounded"
             android:textColor="@android:color/white"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="20dp"/>
     </LinearLayout>
 </ScrollView>

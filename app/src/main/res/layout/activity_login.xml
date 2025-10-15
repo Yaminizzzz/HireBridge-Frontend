@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/white"
-    android:padding="20dp">
+    android:padding="30dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,24 +59,38 @@
             android:inputType="textPassword"/>
 
         <!-- Forgot password -->
-        <TextView
-            android:id="@+id/tvForgotPassword"
+        <Button
+            android:id="@+id/btnForgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Forgot Password?"
-            android:textColor="@android:color/holo_blue_dark"
+            android:textColor="@color/black"
+            android:background="@android:color/transparent"
             android:layout_marginTop="5dp"
-            android:layout_gravity="end"/>
+            android:layout_gravity="end"
+            android:paddingHorizontal="0dp"
+            android:paddingVertical="0dp"
+            android:textSize="14sp"
+            android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+
 
         <!-- Login button -->
         <Button
             android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
             android:text="LOGIN"
             android:textColor="@android:color/white"
-            android:backgroundTint="@color/green"
-            android:layout_marginTop="20dp"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundedbutton"
+            android:backgroundTint="@null"
+            app:backgroundTint="@null" />
+
+
+
+
 
         <!-- Google login -->
         <com.google.android.material.button.MaterialButton

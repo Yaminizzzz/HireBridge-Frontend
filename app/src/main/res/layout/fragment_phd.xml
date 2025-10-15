@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:text="Save"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/black"
-            android:textColor="@android:color/white" />
+            android:backgroundTint="#6A1B9A"
+            android:textColor="@android:color/white"  />
     </LinearLayout>
 </ScrollView>
